@@ -1,6 +1,6 @@
 CC=gcc
-CFLAGS=-g -Wall -O3 -lcurl `curl-config --cflags` -L/usr/lib/x86_64-linux-gnu
-DEPS = webcurl.h
+CFLAGS=-g -Wall -O3 -ltidy -lcurl 
+DEPS = webcurl.c
 OBJ = webcurl.o
 
 %.o: $.c $(DEPS) $(CC) -c -o $@ $< $(CFLAGS)

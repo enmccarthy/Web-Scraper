@@ -1,0 +1,11 @@
+import requests
+from lxml import html
+from bs4 import BeautifulSoup
+
+google = requests.get('https://google.com')
+soup = BeautifulSoup(google.content, 'html.parser')
+
+print(soup.title.name)
+print(soup.title)
+#print(soup.find_all('a'))
+
